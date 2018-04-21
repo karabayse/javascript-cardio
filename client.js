@@ -85,3 +85,23 @@ function reverseString7(str) {
 
 const output7 = reverseString7('Hello');
 console.log(output7);
+
+
+
+// VALIDATE A PALINDROME
+// Return true if palindrome and false if not
+
+function isPalindrome(str) {
+  const revString = str.split('').reverse().join('');
+  return revString === str;
+}
+
+const output8 = isPalindrome('racecar');
+console.log(output8);
+
+
+// REVERSE AN INTEGER
+
+
+
+// CAPITALIZE LETTERS
