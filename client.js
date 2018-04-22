@@ -100,8 +100,16 @@ const output8 = isPalindrome('racecar');
 console.log(output8);
 
 
+
 // REVERSE AN INTEGER
 
+function reverseInt(int) {
+  const revString = int.toString().split('').reverse().join('');
+  return parseInt(revString) * Math.sign(int);
+}
+
+const output9 = reverseInt(-123);
+console.log(output9);
 
 
 // CAPITALIZE LETTERS
