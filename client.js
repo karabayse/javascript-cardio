@@ -145,7 +145,7 @@ function capitalizeLetters3(str) {
   // boundary:  \b
   // range:  [a-z]
   // g:  global
-  // i:  case insensitive 
+  // i:  case insensitive
   return str.replace(/\b[a-z]/gi, function(char) {
     return char.toUpperCase;
   });
@@ -153,3 +153,32 @@ function capitalizeLetters3(str) {
 
 const output12 = capitalizeLetters3('i Love javascript');
 console.log(output12);
+
+
+
+// MAX CHARACTER
+// Return the character that is most common in a string
+
+function maxCharacter(str) {
+  const charMap = {};
+  let maxNum = 0;
+  let maxChar = '';
+
+  str.split('').forEach(function(char) {
+    if(charMap[char]) {
+      charMap[char]++
+    } else {
+      charMap[char] = 1;
+    }
+  });
+  for(let char in charMap) {
+    if(charMap[char] > maxNum) {
+      maxNum = charMap[char];
+      maxChar = char;
+    }
+  }
+  return maxChar;
+}
+
+const output13 = maxCharacter('javascript');
+console.log(output13);
