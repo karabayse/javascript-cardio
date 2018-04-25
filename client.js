@@ -182,3 +182,25 @@ function maxCharacter(str) {
 
 const output13 = maxCharacter('javascript');
 console.log(output13);
+
+
+
+// FIZZBUZZ
+
+function fizzBuzz() {
+  for (var i = 1; i <= 100; i++) {
+    if(i % 3 === 0 && i % 5 === 0) {
+    // or, if(i % 15 === 0), because anything with a
+    // multiple of 15 is also a multiple of both 3 and 5
+      console.log('FizzBuzz');
+    } else if (i % 3 === 0) {
+      console.log('Fizz');
+    } else if (i % 5 === 0) {
+      console.log('Buzz');
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+const output14 = fizzBuzz();
