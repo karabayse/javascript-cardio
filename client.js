@@ -204,3 +204,34 @@ function fizzBuzz() {
 }
 
 const output14 = fizzBuzz();
+
+
+
+// LONGEST WORD
+// Return the longest word of a string
+// If more than one longest word, put into an array
+
+function longestWord(sen) {
+  // Create filtered array
+  const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
+  console.log(wordArr);
+  // Sort by length
+  const sorted = wordArr.sort(function(a, b) {
+      return b.length - a.length;
+    });
+    // If multiple words, put into array
+    const longestWordArr = sorted.filter(function(word) {
+      // Returns true or false
+      return word.length === sorted[0].length;
+    });
+    // Check if more than one array value
+    if(longestWordArr.length === 1) {
+      // Return the word
+      return longestWordArr[0];
+    } else {
+      return longestWordArr;
+    }
+  }
+
+const output15 = longestWord('Hello there, my name is Kara');
+console.log(output15);

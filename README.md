@@ -7,3 +7,4 @@ JavaScript practice
 * Return a string with the first letter of every word capitalized
 * Return the character that is most common in a string
 * FizzBuzz
+* Return the longest word of a string 
