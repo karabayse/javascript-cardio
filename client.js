@@ -235,3 +235,50 @@ function longestWord(sen) {
 
 const output15 = longestWord('Hello there, my name is Kara');
 console.log(output15);
+
+
+
+// ARRAY CHUNKING
+// Split an array into chunked arrays of a specific length
+
+function chunkArray(arr, len) {
+  // Initialize a chunked array
+  const chunkedArr = [];
+  // Set index for while loop
+  let i = 0;
+  // Loop while index is less than array length
+  while(i < arr.length) {
+    // Slice out from the index to the index + chunk length
+    // Push on to chunked array
+    chunkedArr.push(arr.slice(i, i + len));
+    // Increment by chunk length
+    i += len;
+  }
+  return chunkedArr;
+}
+                                                // Chunks with 2 values
+const output16 = chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
+console.log(output16);
+
+
+function chunkArray2(arr, len) {
+  // Initialize chunked array
+  const chunkedArr2 = [];
+  // Loop through array
+  arr.forEach(function(val) {
+    // Get last element
+    const last = chunkedArr2[chunkedArr2.length -1];
+    // Check if there is a last, and if last length is equal to chunk length
+    if(!last || last.length === len) {
+      chunkedArr2.push([val]);
+    } else {
+      last.push(val);
+    }
+    console.log(chunkedArr2);
+    console.log(last);
+  });
+  return chunkedArr2;
+}
+                                                  // Chunks with 3 values
+const output17 = chunkArray2([1, 2, 3, 4, 5, 6, 7], 3);
+console.log(chunkArray2);

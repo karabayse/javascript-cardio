@@ -7,4 +7,5 @@ JavaScript practice
 * Return a string with the first letter of every word capitalized
 * Return the character that is most common in a string
 * FizzBuzz
-* Return the longest word of a string 
+* Return the longest word of a string
+* Split an array into chunked arrays of a specific length
