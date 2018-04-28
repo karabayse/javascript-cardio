@@ -282,3 +282,34 @@ function chunkArray2(arr, len) {
                                                   // Chunks with 3 values
 const output17 = chunkArray2([1, 2, 3, 4, 5, 6, 7], 3);
 console.log(chunkArray2);
+
+
+
+// FLATTEN ARRAY
+// Take an array of arrays and turn it into a single array
+
+function flattenArray(arrays) {
+  return arrays.reduce(function(a, b) {
+    return a.concat(b);
+  });
+}
+
+const output18 = flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
+console.log(output18);
+
+
+function flattenArray2(arrays) {
+  return [].concat.apply([], arrays);
+}
+
+const output19 = flattenArray2([[1, 2], [3, 4], [5, 6], [7]]);
+console.log(output19);
+
+
+function flattenArray3(arrays) {
+                // spread 
+  return [].concat(...arrays);
+}
+
+const output20 = flattenArray3([[1, 2], [3, 4], [5, 6], [7]]);
+console.log(output20);
