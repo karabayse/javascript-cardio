@@ -10,3 +10,4 @@ JavaScript practice
 * Return the longest word of a string
 * Split an array into chunked arrays of a specific length
 * Take an array of arrays and turn it into a single array
+* Return true if anagram and false if not
