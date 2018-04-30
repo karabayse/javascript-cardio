@@ -11,3 +11,4 @@ JavaScript practice
 * Split an array into chunked arrays of a specific length
 * Take an array of arrays and turn it into a single array
 * Return true if anagram and false if not
+* Change every letter of a string to the one that follows it alphabetically, and capitalize vowels

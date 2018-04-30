@@ -336,3 +336,28 @@ function formatStr(str) {
 
 const output21 = isAnagram('Dormitory', 'dirty room##!!');
 console.log(output21);
+
+
+
+// LETTER CHANGES
+// Change every letter of a string to the one that follows it alphabetically
+// Capitalize vowels
+// Z should turn to A
+
+function letterChanges(str) {
+  let newStr = str.replace(/[a-z]/gi, function(char) {
+    if(char === 'z' || char === 'Z') {
+      return 'a';
+    } else {
+                    // every letter in the alphabet has a character code
+      return String.fromCharCode(char.charCodeAt() + 1);
+    }
+  });
+  newStr = newStr.replace(/a|e|i|o|u/gi, function(vowel) {
+    return vowel.toUpperCase();
+  });
+  return newStr;
+}
+
+const output22 = letterChanges('zebra stripes');
+console.log(output22);
